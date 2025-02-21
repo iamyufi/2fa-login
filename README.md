@@ -70,6 +70,23 @@ Test the Application
 Open your browser and go to http://localhost:3000.
 Try registering a user, logging in, and testing the two-factor authentication flow by checking your email for the OTP code.
 
+✉️ Setting Up Gmail for Email OTP
+If you're using Gmail to send OTP codes, you need to create an App Password because Gmail blocks less secure apps by default. Follow these steps:
+
+🔒 Step 1: Enable 2-Step Verification on Your Google Account
+Go to your Google Account Security Settings.
+Under "Signing in to Google", find "2-Step Verification" and click "Get Started".
+Follow the prompts to enable 2-Step Verification for your account.
+
+🔑 Step 2: Generate an App Password
+After enabling 2-Step Verification, return to the Security Settings.
+Under "Signing in to Google", click "App passwords".
+You might need to sign in again.
+Under "Select app", choose "Mail".
+Under "Select device", choose "Other (Custom name)" and type a name like 2FA-Login-App.
+Click "Generate".
+Google will display a 16-character password. Copy this password (without spaces).
+
 ✅ Features
 🔐 Two-Factor Authentication: OTP sent via email.
 🔒 Secure Password Storage: Passwords hashed with bcrypt.
