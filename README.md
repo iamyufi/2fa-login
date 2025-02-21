@@ -40,21 +40,35 @@ Viewer: Read-only access.
 💡 Getting Started
 
 🔧 Installation
-Clone the repository:
+To get this project up and running on your local machine, follow these steps:
+
+Clone the Repository
+
+Navigate to the folder where you want the project to be saved.
+Open your terminal and run the following command to clone the repository:
 git clone https://github.com/your-username/your-repo-name.git
+
+After cloning, navigate into the project folder:
 cd your-repo-name
+Install Dependencies
 
-Install dependencies:
+The project uses Node.js and npm (Node Package Manager). Ensure you have them installed:
+Check Node.js: node -v
+Check npm: npm -v
+If you don’t have them, download and install Node.js.
+
+To install all necessary dependencies, run:
 npm install
+This will install all required packages as listed in the package.json file.
+Set Up Environment Variables
 
-Configure environment variables:
-Create a .env file in the root directory and add:
-EMAIL_USER=your_email@example.com
-EMAIL_PASS=your_email_password
-JWT_SECRET=your_jwt_secret
-
-🚀 Run the Application:
+To start the server, run:
 npm start
+The server will typically run on http://localhost:3000 (unless otherwise specified).
+Test the Application
+
+Open your browser and go to http://localhost:3000.
+Try registering a user, logging in, and testing the two-factor authentication flow by checking your email for the OTP code.
 
 ✅ Features
 🔐 Two-Factor Authentication: OTP sent via email.
