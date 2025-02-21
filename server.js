@@ -12,7 +12,7 @@ app.use(express.static('public'));
 
 // Hardcoded bruger til demostration af OTP
 const validUser = {
-    email: 'megalarsfarts@gmail.com',
+    email: 'user@example.com', // insert email
     password: 'password123'
 };
 
@@ -35,8 +35,8 @@ const validUser = {
 const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-        user: 'megalarsfarts@gmail.com',    // Gmail
-        pass: 'fonv fesa xwik uuey'        // Gmail konto app cus kode
+        user: 'user@example.com',    // insert Gmail
+        pass: 'xxxx xxxx xxxx xxxx'        // insert Gmail konto app cus kode
     }
 });
 
@@ -67,7 +67,7 @@ app.post('/login', async (req, res) => {
         // Definerer mailindstillingerne for at sende OTP'en til brugeren, inklusive 
         // afsender, modtager, emne og beskedtekst.
         const mailOptions = {
-            from: 'megalarsfarts@gmail.com',
+            from: 'user@example.com', // mail
             to: email,
             subject: 'Login OTP',
             text: `Your OTP for login is: ${otp}`
